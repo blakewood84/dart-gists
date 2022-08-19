@@ -33,4 +33,4 @@ Example:
 
 ```
 
-<p align="center"><img src="/remove_all/remove_all.png" alt="Remove All Extension"/></p>
+<p><img src="/remove_all/remove_all.png" alt="Remove All Extension"/></p>
