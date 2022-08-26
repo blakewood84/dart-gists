@@ -39,6 +39,21 @@ Example:
 
 Returns a bool of true || false of if the device is a tablet or not.
 
+```dart 
+    extension IsTablet on MediaQueryData {
+        bool get isTablet => size.shortestSide > 600;
+    }
+```
+
+#### Example:
+
+```dart
+    @override
+    Widget build(Buildcontext context) {
+        final isTablet = MediaQuery.of(context).isTablet // True || False
+    }
+```
+
 <p align="center"><img src="/is_tablet/extension.png" alt="Is Tablet Extension"/></p>
 
 <p align="center"><img src="/is_tablet/example.png" alt="Example"/></p>
