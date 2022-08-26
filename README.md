@@ -41,6 +41,8 @@ Returns a bool of true || false of if the device is a tablet or not.
 
 #### Extension: 
 
+`isTablet` checks the `size.shortestSide` property of the MediaQueryData class, then compares it to a breakpoint of 600. If it's greater than this, it is a tablet. If not, it's a high probability of being a mobile device. 
+
 ```dart 
     extension IsTablet on MediaQueryData {
         bool get isTablet => size.shortestSide > 600;
@@ -48,6 +50,8 @@ Returns a bool of true || false of if the device is a tablet or not.
 ```
 
 #### Example:
+
+Just call this extension in the Stateless or Stateful widget's build method to extact the value.
 
 ```dart
     @override
