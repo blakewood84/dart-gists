@@ -34,3 +34,11 @@ Example:
 ```
 
 <p align="center"><img src="/remove_all/remove_all.png" alt="Remove All Extension"/></p>
+
+### 3. Is Tablet
+
+Returns a bool of true || false of if the device is a tablet or not.
+
+<p align="center"><img src="/is_tablet/extension.png" alt="Is Tablet Extension"/></p>
+
+<p align="center"><img src="/is_tablet/example.png" alt="Example"/></p>
