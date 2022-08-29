@@ -4,19 +4,52 @@
 
 Returns a new type from the matching condition.
 
-Example:
+#### Extension: 
+
+This extension accepts 2 functions, one to conduct a test to decide if it will return this Object into the new Iterable, and one to execute an return a different type of `R`.
+
+This is a synchronous generator function. This will compile into an Iterable of the given type of `T`.
+
+```dart 
+    extension WhereTo<T> on Iterable<T> {
+        Iterable<R> whereTo<R>(bool Function(T element) test, R Function(T element) returnType) sync* {
+            for (final item in this) {
+                if(test(item)) {
+                    yield returnType(item);
+                }
+            }
+        }
+    }
+
+```
+
+Examples:
 
 ```dart
 
     final list = <int>[1,2,3,4,5];
     
-    final stringList = list.whereTo((item) => item == 1 || item == 2, (item) => item.toString());
+    final stringIterable = list.whereTo((item) => item == 1 || item == 2, (item) => item.toString());
 
-    print(stringList); // ( "1", "2" )
+    print(stringIterable); // ( "1", "2" )
 
 ```
 
-<p align="center"><img src="/where_to/where_to.png" alt="Where To Extension"/></p>
+```dart
+
+    final names = <String>['Mark', 'Anthony', 'Tim'];
+    
+    final personIterable = list.whereTo((name) => name == 'Mark', (name) => Person(name: name));
+
+    print(personIterable); // ( Person(name: 'Mark') )
+
+    final personList = personIterable.toList();
+
+    print(personList);  // [ Person(name: 'Mark') ]
+
+```
+
+---
 
 ### 2. Remove All
 
