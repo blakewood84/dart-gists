@@ -23,7 +23,7 @@ This is a synchronous generator function. This will compile into an Iterable of 
 
 ```
 
-Examples:
+#### Examples:
 
 ```dart
 
@@ -55,7 +55,20 @@ Examples:
 
 Removes all keys / values matching the following List of keys.
 
-Example: 
+#### Extension:
+
+```dart
+    extension RemoveAll<K, V> on Map<K, V> {
+        void removeAll(List<String> keysToRemove) {
+            for (final key in keysToRemove) {
+                this.remove(key);
+            }
+        }
+    }
+
+```
+
+#### Example: 
 
 ```dart
     final map = { 'one': 1, 'two': 2, 'three': 3 };
@@ -66,7 +79,7 @@ Example:
 
 ```
 
-<p align="center"><img src="/remove_all/remove_all.png" alt="Remove All Extension"/></p>
+---
 
 ### 3. Is Tablet
 
