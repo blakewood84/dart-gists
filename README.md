@@ -1,5 +1,9 @@
 # Dart Gists Library - Dart Extensions
 
+A collection of gists and extensions written in the Dart programming language.
+
+--- 
+
 ### 1. Where To Extension
 
 Returns a new type from the matching condition.
@@ -105,3 +109,34 @@ Just call this extension in the Stateless or Stateful widget's build method to e
         final isTablet = MediaQuery.of(context).isTablet // True || False
     }
 ```
+
+--- 
+
+### 3. Is Portrait
+
+Returns a bool of true || false of if the device's screen orientation portrait mode or not.
+
+#### Extension: 
+
+`isPortrait` checks the MediaQueryData's orientation and cross references it with `Orientation.portrait` enumerable.
+
+`orientation` is a getter of `MediaQueryData`, could also be accessed as `this.orientation`.
+
+```dart 
+    extension IsPortrait on MediaQueryData {
+        bool get isPortrait => orientation == Orientation.portrait;
+    }
+```
+
+#### Example:
+
+Just call this extension in the Stateless or Stateful widget's build method to extact the value.
+
+```dart
+    @override
+    Widget build(Buildcontext context) {
+        final isPortrait = MediaQuery.of(context).isPortrait // True || False
+    }
+```
+
+###
