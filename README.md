@@ -148,4 +148,24 @@ Just call this extension in the Stateless or Stateful widget's build method to e
     }
 ```
 
-###
+### 4. Log Object
+
+Logs any Object as a String in the debug console.
+
+#### Extension: 
+
+```dart
+
+    import 'dart:developer' as devtools;
+
+    extension LogObject on Object {
+        log() => devtools.log(this.toString());
+    }
+```
+#### Example: 
+
+```dart
+    final map = {'test': [1,2,3,4]};
+
+    map.log(); // {test: [1,2,3,4]};
+```
