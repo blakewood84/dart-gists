@@ -166,6 +166,6 @@ Logs any Object as a String in the debug console.
 
 ```dart
     final map = {'test': [1,2,3,4]};
-
+    
     map.log(); // {test: [1,2,3,4]};
 ```
