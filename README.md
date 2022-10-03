@@ -191,3 +191,18 @@ Logs your map's key's and values to the debug console in an easy to read format.
         }
     }
 ```
+
+#### Example:
+
+```dart 
+    final map = {'name': 'Bill', 'age': 21};
+
+    map.printMap();
+
+    // {
+    //    name : Bill
+    //    age: 21
+    // }
+
+```
+
