@@ -213,7 +213,7 @@ Remove's all empty strings from any `List<String>`
 
 ```dart 
     extension RemoveEmptyString on List<String> {
-        void removeEmptyString() {
+        List<String> removeEmptyString() {
             final list = this;
             list.removeWhere((item) => item.isEmpty);
             return this;
@@ -224,14 +224,8 @@ Remove's all empty strings from any `List<String>`
 #### Example:
 
 ```dart 
-    final list 
+    final list = ['1', '', '2', '3', ''];
 
-    map.printMap();
-
-    // {
-    //    name : Bill
-    //    age: 21
-    // }
-
+    final newList = list.removeEmptyString(); // ['1', '2', '3']
 ```
 
