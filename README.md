@@ -205,4 +205,33 @@ Logs your map's key's and values to the debug console in an easy to read format.
     // }
 
 ```
+### 6. Remove Empty String 
+
+Remove's all empty strings from any `List<String>`
+
+#### Extension: 
+
+```dart 
+    extension RemoveEmptyString on List<String> {
+        void removeEmptyString() {
+            final list = this;
+            list.removeWhere((item) => item.isEmpty);
+            return this;
+        }
+    }
+```
+
+#### Example:
+
+```dart 
+    final list 
+
+    map.printMap();
+
+    // {
+    //    name : Bill
+    //    age: 21
+    // }
+
+```
 
