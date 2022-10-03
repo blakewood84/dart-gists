@@ -171,3 +171,23 @@ Logs any Object as a String in the debug console.
     
     map.log(); // {test: [1,2,3,4]};
 ```
+
+### 5. Print Map 
+
+Logs your map's key's and values to the debug console in an easy to read format.
+
+#### Extension: 
+
+```dart 
+    import 'dart:developer' as devtools;
+
+    extension PrintMap<K, V> on Map<K, V> {
+        void printMap() {
+            devtools.log('{');
+            for(final entry in entries) {
+                devtools.log('\n\t${entry.key} : ${entry.value}');
+            }
+            devtools.log('}');
+        }
+    }
+```
