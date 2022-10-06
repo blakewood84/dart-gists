@@ -9,7 +9,9 @@
 █▄▄▄▄▄▄██▄█ █▄▄█▄▄▄█  █▄█ █▄▄▄█    █▄▄▄▄▄▄▄█▄▄▄█▄▄▄▄▄▄▄█ █▄▄▄█ █▄▄▄▄▄▄▄█
 ```
 
+A collection of gists and extensions written in the Dart programming language.
 
+More to come soon...
 
 --- 
 
