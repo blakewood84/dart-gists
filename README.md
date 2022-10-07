@@ -257,7 +257,9 @@ Detects the direction of the swipe and makes utilizes a callback based on direct
     GestureDetector(
         onHorizontalDragEnd: (details) {
             details.detectSwipeDirectionAndCall(
-                
+                (l) {
+                    print('Swiped left!');
+                }
             )
         }
     )
