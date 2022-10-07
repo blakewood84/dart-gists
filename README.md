@@ -254,7 +254,11 @@ Detects the direction of the swipe and makes utilizes a callback based on direct
 #### Example:
 
 ```dart 
-    final list = ['1', '', '2', '3', ''];
-
-    final newList = list.removeEmptyString(); // ['1', '2', '3']
+    GestureDetector(
+        onHorizontalDragEnd: (details) {
+            details.detectSwipeDirectionAndCall(
+                
+            )
+        }
+    )
 ```
