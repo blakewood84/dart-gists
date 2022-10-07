@@ -259,7 +259,10 @@ Detects the direction of the swipe and makes utilizes a callback based on direct
             details.detectSwipeDirectionAndCall(
                 (l) {
                     print('Swiped left!');
-                }
+                },
+                (r) {
+                    print('Swiped right!');
+                },
             )
         }
     )
