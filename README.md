@@ -229,3 +229,32 @@ Remove's all empty strings from any `List<String>`
     final newList = list.removeEmptyString(); // ['1', '2', '3']
 ```
 
+### 6. Detect Swipe Direction on Drag Details
+
+Detects the direction of the swipe and makes utilizes a callback based on direction.
+
+#### Extension: 
+
+```dart 
+    extension DetectSwipeDirectionAndCall on DragEndDetails {
+        void detectWipeDirectionAndCall(Function(void l)? left, Function(void r)? right) {
+            final direction = primaryVelocity ?? 0.0;
+
+            if(direction > 0) {
+                left?.call(null);
+            }
+
+            if(direction < 0>) {
+                right?.call(null);
+            }
+        }
+    }
+```
+
+#### Example:
+
+```dart 
+    final list = ['1', '', '2', '3', ''];
+
+    final newList = list.removeEmptyString(); // ['1', '2', '3']
+```
