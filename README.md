@@ -267,3 +267,27 @@ Detects the direction of the swipe and makes utilizes a callback based on direct
         }
     )
 ```
+
+### 7. Capitalize the First Letter of a String
+
+Capitalizes the first letter of a String.
+
+#### Extension: 
+
+```dart 
+    
+    extension CapitalizeFirstLetter on String {
+        String firstLetter() {
+            return '${this[0].toUpperCase()}${substring(1)}';
+        }
+    }
+
+```
+
+#### Example:
+
+```dart
+    final myString = 'battleship';
+
+    print(myString.firstLetter()); // 'Battleship'
+```
