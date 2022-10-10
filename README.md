@@ -291,3 +291,31 @@ Capitalizes the first letter of a String.
 
     print(myString.firstLetter()); // 'Battleship'
 ```
+
+### 7. Find the Index of an Object on an Iterable
+
+Loops through the Iterable and finds the index of a given Object.
+
+#### Extension: 
+
+```dart 
+    
+    int indexOf<T>(T object) {
+        for (int i = 0; i < length; i++) {
+            final element = elementAt(i);
+            if (object == element) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+```
+
+#### Example:
+
+```dart
+    final Iterable myIterable = data['iterable']; // ('hello', 'apple', 'tree')
+
+    print(myIterable.indexOf('apple')); // 0
+```
