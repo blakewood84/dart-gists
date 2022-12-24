@@ -244,7 +244,7 @@ Detects the direction of the swipe and makes utilizes a callback based on direct
                 left?.call(null);
             }
 
-            if(direction < 0>) {
+            if(direction < 0) {
                 right?.call(null);
             }
         }
