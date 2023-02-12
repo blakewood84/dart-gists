@@ -319,3 +319,27 @@ Loops through the Iterable and finds the index of a given Object.
 
     print(myIterable.indexOf('apple')); // 0
 ```
+
+### 8. Format any DateTime to String
+
+Formats any DateTime class into a String using the DateFormat class.
+
+#### Extension: 
+
+```dart 
+
+    import 'package:intl/intl.dart';
+
+    extension FormatDateToString on DateTime {
+        String formatDateToString(String format) => DateFormat(format).format(this);
+    }
+
+```
+
+#### Example:
+
+```dart
+    final date = DateTime.now();
+
+    final dateString = date.formatDateToString.('MMMM dd, yyyy'); // February 2nd, 2023
+```
