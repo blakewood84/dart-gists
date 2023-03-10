@@ -346,7 +346,7 @@ Formats any DateTime class into a String using the DateFormat class.
 
 ```
 
-### 8. Convert DateTime's dayOfWeek to String
+### 9. Convert DateTime's dayOfWeek to String
 
 Formats the `int` given from DateTime's dayOfWeek property into a `String` representing the day of the week.
 
@@ -387,5 +387,45 @@ Formats the `int` given from DateTime's dayOfWeek property into a `String` repre
     final dayOfWeek = DateTime.now().dayOfWeek; // 3
 
     final nameOfDay = dayOfWeek.convertDayOfWeekToString;  // Wednesday 
+
+```
+
+### 10. Find All Dates of a Week #
+
+Given a week number `int` out of a possible 52 - 53 weeks of the year, this will return an [Iterable] of [DateTime] for each day of the week specified. Starts on Monday (first day) and ends on Sunday (last day).
+
+#### Extension: 
+
+```dart 
+    extension FindAllDatesOfWeekNumber on int? {
+        final shadow = this;
+        if(shadow == null) return [];
+        
+        // The last day of the week
+        // If shadow = 2 then Jan 14th
+        final lastDay = shadow * 7;
+
+        final currentYear = DateTime.now().year // Ex: 2023
+
+        // Starts at the first day of the year and adds the number of days to target the last day of the week
+        final lastWeekOfDay = DateTime.utc(currentYear, 1, 1).add(Duration(days: lastDay));
+
+        final days = List.generate(7, index) {
+            return lastWeekDay.subtract(Duration(days: index));
+        }).reversed;
+
+        return days;
+    }
+
+```
+
+#### Example:
+
+```dart
+
+    final weekNumber = 23;
+    final datesOfWeekList = weekNumber.findAllDatesOfWeekNumber;
+
+    // (2023-02-06 00:00:00.000Z, ... 2023-02-12 00:00:00.000Z)
 
 ```
