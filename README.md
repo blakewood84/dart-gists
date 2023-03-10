@@ -398,23 +398,25 @@ Given a week number `int` out of a possible 52 - 53 weeks of the year, this will
 
 ```dart 
     extension FindAllDatesOfWeekNumber on int? {
-        final shadow = this;
-        if(shadow == null) return [];
-        
-        // The last day of the week
-        // If shadow = 2 then Jan 14th
-        final lastDay = shadow * 7;
+        Iterable<DateTime> get findAllDatesOfWeekNumber {
+            final shadow = this;
+            if(shadow == null) return [];
+            
+            // The last day of the week
+            // If shadow = 2 then Jan 14th
+            final lastDay = shadow * 7;
 
-        final currentYear = DateTime.now().year // Ex: 2023
+            final currentYear = DateTime.now().year // Ex: 2023
 
-        // Starts at the first day of the year and adds the number of days to target the last day of the week
-        final lastWeekOfDay = DateTime.utc(currentYear, 1, 1).add(Duration(days: lastDay));
+            // Starts at the first day of the year and adds the number of days to target the last day of the week
+            final lastWeekOfDay = DateTime.utc(currentYear, 1, 1).add(Duration(days: lastDay));
 
-        final days = List.generate(7, index) {
-            return lastWeekDay.subtract(Duration(days: index));
-        }).reversed;
+            final days = List.generate(7, index) {
+                return lastWeekDay.subtract(Duration(days: index));
+            }).reversed;
 
-        return days;
+            return days;
+        }
     }
 
 ```
@@ -427,5 +429,35 @@ Given a week number `int` out of a possible 52 - 53 weeks of the year, this will
     final datesOfWeekList = weekNumber.findAllDatesOfWeekNumber;
 
     // (2023-02-06 00:00:00.000Z, ... 2023-02-12 00:00:00.000Z)
+
+```
+
+### 11. Find All Week Numbers of a Year
+
+Returns an [Iterable] of [int] for every week number of a given year.
+The year is specified as an [int], such as the year 2023.
+
+#### Extension: 
+
+```dart 
+    extension WeekNumbersList on int? {
+        Iterable<int> get weekNumbersList {
+            final currentYear = this;
+            if (currentYear == null) return [];
+
+            final numberOfWeeksForYear = (DateTime.utc(currentYear, 12, 31).difference(DateTime.utc(currentYear, 1, 1)).inDays / 7).ceil();
+
+            return Iterable.generate(numberOfWeeksForYear, (index) => index + 1);
+        }
+    }
+
+```
+
+#### Example:
+
+```dart
+
+    final year = 2023;
+    final weeksInYear = year.weekNumbersList; // (1, 2, 3, ..., 51, 52)
 
 ```
