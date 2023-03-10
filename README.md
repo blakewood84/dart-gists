@@ -345,3 +345,47 @@ Formats any DateTime class into a String using the DateFormat class.
     final dateString = date.formatDateToString.('MMMM dd, yyyy'); // February 2nd, 2023
 
 ```
+
+### 8. Convert DateTime's dayOfWeek to String
+
+Formats the `int` given from DateTime's dayOfWeek property into a `String` representing the day of the week.
+
+#### Extension: 
+
+```dart 
+    extension ConvertDayOfWeekToString on int {
+        String get convertDayOfWeekToString {
+            final shadow = this;
+
+            switch (shadow) {
+                case DateTime.monday:
+                    return 'Monday';
+                case DateTime.tuesday:
+                    return 'Tuesday';
+                case DateTime.wednesday:
+                    return 'Wednesday';
+                case DateTime.thursday:
+                    return 'Thursday';
+                case DateTime.friday:
+                    return 'Friday';
+                case DateTime.saturday:
+                    return 'Saturday';
+                case DateTime.sunday:
+                    return 'Sunday';
+                default:
+                    return 'Unknown Date';
+            }
+        }
+    }
+
+```
+
+#### Example:
+
+```dart
+
+    final dayOfWeek = DateTime.now().dayOfWeek; // 3
+
+    final nameOfDay = dayOfWeek.convertDayOfWeekToString;  // Wednesday 
+
+```
