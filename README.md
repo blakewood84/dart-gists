@@ -432,6 +432,8 @@ Given a week number `int` out of a possible 52 - 53 weeks of the year, this will
 
 ```
 
+---
+
 ### 11. Find All Week Numbers of a Year
 
 Returns an [Iterable] of [int] for every week number of a given year.
