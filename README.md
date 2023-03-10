@@ -150,6 +150,8 @@ Just call this extension in the Stateless or Stateful widget's build method to e
     }
 ```
 
+---
+
 ### 4. Log Object
 
 Logs any Object as a String in the debug console.
@@ -171,6 +173,8 @@ Logs any Object as a String in the debug console.
     
     map.log(); // {test: [1,2,3,4]};
 ```
+
+---
 
 ### 5. Print Map 
 
@@ -205,6 +209,9 @@ Logs your map's key's and values to the debug console in an easy to read format.
     // }
 
 ```
+
+---
+
 ### 6. Remove Empty String 
 
 Remove's all empty strings from any `List<String>`
@@ -228,6 +235,8 @@ Remove's all empty strings from any `List<String>`
 
     final newList = list.removeEmptyString(); // ['1', '2', '3']
 ```
+
+---
 
 ### 6. Detect Swipe Direction on Drag Details
 
@@ -268,6 +277,8 @@ Detects the direction of the swipe and makes utilizes a callback based on direct
     )
 ```
 
+---
+
 ### 7. Capitalize the First Letter of a String
 
 Capitalizes the first letter of a String.
@@ -291,6 +302,8 @@ Capitalizes the first letter of a String.
 
     print(myString.firstLetter()); // 'Battleship'
 ```
+
+---
 
 ### 7. Find the Index of an Object on an Iterable
 
@@ -320,6 +333,8 @@ Loops through the Iterable and finds the index of a given Object.
     print(myIterable.indexOf('apple')); // 0
 ```
 
+---
+
 ### 8. Format any DateTime to String
 
 Formats any DateTime class into a String using the DateFormat class.
@@ -345,6 +360,8 @@ Formats any DateTime class into a String using the DateFormat class.
     final dateString = date.formatDateToString.('MMMM dd, yyyy'); // February 2nd, 2023
 
 ```
+
+---
 
 ### 9. Convert DateTime's dayOfWeek to String
 
@@ -389,6 +406,7 @@ Formats the `int` given from DateTime's dayOfWeek property into a `String` repre
     final nameOfDay = dayOfWeek.convertDayOfWeekToString;  // Wednesday 
 
 ```
+---
 
 ### 10. Find All Dates of a Week #
 
