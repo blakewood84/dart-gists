@@ -145,7 +145,7 @@ Just call this extension in the Stateless or Stateful widget's build method to e
 
 ```dart
     @override
-    Widget build(Buildcontext context) {
+    Widget build(BuildContext context) {
         final isPortrait = MediaQuery.of(context).isPortrait // True || False
     }
 ```
@@ -477,7 +477,7 @@ The year is specified as an [int], such as the year 2023.
 
 ```dart
 
-    final year = 2023;
+    final year = DateTime.now().year;
     final weeksInYear = year.weekNumbersList; // (1, 2, 3, ..., 51, 52)
 
 ```
