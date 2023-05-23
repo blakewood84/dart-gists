@@ -359,7 +359,7 @@ Formats any DateTime class into a String using the DateFormat class.
 
     final date = DateTime.now();
 
-    final dateString = date.formatDateToString.('MMMM dd, yyyy'); // February 2nd, 2023
+    final dateString = date.formatDateToString('MMMM dd, yyyy'); // February 2nd, 2023
 
 ```
 
