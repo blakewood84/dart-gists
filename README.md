@@ -12,7 +12,7 @@
 
 A collection of gists and extensions written in the Dart programming language.
 
-More to come soon!!!
+Always adding more. Feel free to open a PR if you'd like to contribute!
 
 ---
 
