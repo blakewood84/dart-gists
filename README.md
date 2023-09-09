@@ -487,4 +487,4 @@ The year is specified as an [int], such as the year 2023.
 
 ---
 
-### 12. Next Example...
+### 12. Next Example
